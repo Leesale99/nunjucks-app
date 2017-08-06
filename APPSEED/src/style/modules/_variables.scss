@@ -1,0 +1,68 @@
+// **********
+// TYPOGRAPHY
+// **********
+$serif: "Merriweather",serif;
+$sans: "Istok Web",sans-serif;
+$condensed: "Oswald", sans-serif;
+$icons:FontAwesome;
+
+@mixin uppercase{
+	text-transform: uppercase;
+};
+
+@mixin serif-italic{
+	font-family: $serif;
+    font-style: italic;
+}
+
+@mixin condensed-uppercase-bold{
+	font-family: $condensed;
+    text-transform: uppercase;
+}
+
+@mixin sans-light{
+	font-family: $sans;
+	font-weight: 400;
+}
+
+@mixin sans-uppercase-normal{
+	font-family: $sans;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+// **********
+// COLORS
+// **********
+// Base Colors
+$white: #FFFFFF;
+$off_white: #c2c2c2;
+$black: #000000;
+$white_translucent: rgba(255,255,255,0.8);
+$black_translucent: rgba(0,0,0,0.6);
+
+// Text colors
+$text_slate:#374049;
+
+// Social Colors
+$facebookBlue: #3b5998;
+$twitterBlue: #4099ff;
+
+
+// Padding/Margins
+$content-padding:3.6rem;
+$p-spacing: 2rem;
+
+// Some math to get container size then base blocks off them
+// Its half the container size at each media query
+$container-sm-half:37.5rem;
+$container-md-half:48.5rem;
+$container-lg-half:58.5rem;
+
+$container-sm:75rem;
+$container-md:97rem;
+$container-lg:117rem;
+
+// Animations
+$transition--opacity: opacity 300ms linear;
+$transition--all: all 300ms ease-in-out;
+$transition--all-fast: all 100ms;

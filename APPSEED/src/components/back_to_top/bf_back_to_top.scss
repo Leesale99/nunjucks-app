@@ -1,0 +1,37 @@
+/*back to top*/
+.back-to-top {
+	position: fixed;
+	right: 0;
+	width: 5em;
+	text-align: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: $transition--opacity;
+	&:before{
+		@include icon('fa-arrow-up');
+		height: 3rem;
+		width: 100%;
+		margin-top: -3rem;
+	}
+	i.fa{
+		font-size: 3rem;
+	}
+	span {
+		display: block;
+		font-size: 1.2rem;
+		&::selection {
+			background-color: transparent;
+		}
+	}
+	&.back-to-top--scrolled {
+		bottom: 5vh;
+		cursor: pointer;
+		visibility: visible;
+		opacity: .5;
+		transition: $transition--opacity;
+		&:hover {
+			opacity: 1;
+			transition: $transition--opacity;
+		}
+	}
+}
