@@ -1,0 +1,1 @@
+console.log('tabs script should not care whether tabs are horizontal or vertical');
