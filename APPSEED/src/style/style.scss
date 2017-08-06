@@ -1,0 +1,32 @@
+// MODULES
+
+//the import statments for CSS and JS can and should be exactly the same. Components that are CSS only should have some example markup in the HTML folder. The JS file is optional.
+
+@import 'modules/variables';
+@import 'modules/breakpoints';
+@import 'modules/icons';
+@import 'modules/mixins';
+@import 'modules/flexboxgrid';
+
+@import '../components/accordion/bf_accordion';
+@import '../components/back_to_top/bf_back_to_top';
+@import '../components/banners/bf_banners';
+@import '../components/breadcrumbs/bf_breadcrumbs';
+@import '../components/cards/bf_cards';
+@import '../components/carousel/bf_carousel';
+@import '../components/contentBlock/bf_contentBlock';
+@import '../components/forms/bf_forms';
+@import '../components/grid_flexbox/bf_grid_flexbox';
+@import '../components/headers/bf_headers';
+@import '../components/modal/bf_modal';
+@import '../components/nav_footer/bf_nav_footer';
+@import '../components/nav_main/bf_nav_main';
+@import '../components/search/searchBox/bf_searchBox';
+@import '../components/search/searchFilters/bf_searchFilters';
+@import '../components/search/searchPagination/bf_searchPagination';
+@import '../components/search/searchResult/bf_searchResult';
+@import '../components/social/bf_social';
+@import '../components/tabs/bf_tabs';
+
+// PARTIALS
+@import 'partials/main';

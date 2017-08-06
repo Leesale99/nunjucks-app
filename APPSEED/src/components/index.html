@@ -1,0 +1,58 @@
+<!-- Extent this master layout -->
+{% extends '_layouts/main-application.html' %}
+{# {% set page = {title:"Home"} %} #}
+
+{% block content %}
+<main>
+	<!-- EXAMPLE: DELETE WHEN DEVELOPING -->
+	<div class="container">
+		<h1>Hello! This is the {{page.title}} page!</h1>
+		<p>Here we can include components and set variables to them. You could do column width, background colors, class names; you name it! Be creative!</p>
+		<div class="row">
+
+			<!-- You can also Loop! -->
+			{% set blocks = [
+				{
+					heading: "No image nor button block",
+					button: false,
+					imagesrc: null
+				},{
+					heading: "Button but no image block",
+					button: true,
+					imagesrc: null
+				},{
+					heading: "With 1 block component I have made 4 different blocks",
+					button: false,
+					imagesrc: null
+				}
+			] %}
+			{% for block in blocks %}
+				{% include "_shared/block.html" %}
+			{% endfor %}
+
+		</div>
+		<div class="row">
+			<!-- Of course you can do single includes as well -->
+			<!-- These are useful for shared markup like navaigation or footer -->
+			{% set block = {
+				heading: "Button and image block",
+				button: true,
+				imagesrc:"http://logo.clearbit.com/brightfind.com"
+			} %}
+			{% include "_shared/block.html" %}
+
+		</div>
+		<h2>Regular Old Loop</h2>
+		<p><code>for i in range(0, 10)</code></p>
+		{% for i in range(0, 10) %}
+			<p>Lorem ipsum Ex sit minim labore mollit reprehenderit ad magna ea et incididunt Duis Duis sunt dolore aliqua exercitation tempor in occaecat velit mollit ullamco culpa consectetur culpa mollit cillum eu elit eiusmod quis veniam. Lorem ipsum Ut aute sunt exercitation dolor dolor minim nisi exercitation magna laboris reprehenderit ullamco tempor nostrud minim ex laboris aliquip Duis velit laborum et elit adipisicing non eiusmod laborum est incididunt.</p><br>
+		{% endfor %}
+
+	</div>
+	<!-- END EXAMPLE -->
+</main>
+{% endblock %}
+
+<!-- Add JavaScript unique to this page type -->
+{% block javascript %}
+{% endblock %}
