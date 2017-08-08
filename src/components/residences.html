@@ -1,0 +1,69 @@
+<!-- Extent this master layout -->
+{% extends '_layouts/main-application.html' %}
+{% set page = residences %}
+
+{% block content %}
+	<!-- PAGE WRAPPER -->
+	<div class="wrapper">
+
+		<div class="offscreen-menu">
+			<button type="button">Close</button>
+			<nav class="nav-main">
+				<ul>
+					<li><a href="residences.html">RESIDENCES</a></li>
+					<li><a href="amenities.html">AMENITIES</a></li>
+					<li><a href="neighborhood.html">NEIGHBORHOOD</a></li>
+					<li><a href="availability.html">AVAILABILITY</a></li>
+					<li><a href="press.html">PRESS</a></li>
+					<li><a href="news.html">NEWS</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<!-- HEADER -->
+		<header id="header" class="header">
+			<!-- menu toggle btn -->
+			<button type="button">Menu</button>
+			<!-- logo -->
+			<a class="logo" href="#"></a>
+			<!-- Menu -->
+			<nav>
+				<ul>
+					<li>
+						<a href="">Availability</a>
+					</li>
+					<li>
+						<a href="">Press</a>
+					</li>
+					<li>
+						<a href="">Contact</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<!-- END HEADER -->
+
+		<!-- MAIN-CONTENT -->
+		<main id="residences">
+
+			<section class="hero b-lazy" data-src="images/1920x1066_bg6.jpg">
+				<div class="container">
+					<div class="hero__caption">
+						<h1>Inside, Uutside – Elegant Giant Focused On Details</h1>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quis totam sed, ad commodi quasi harum cupiditate adipisci, fugit eligendi aliquid accusamus fuga numquam est perspiciatis, ratione repellendus. Sapiente, officia reiciendis repellendus atque corporis.
+						</p>
+					</div>
+				</div>
+				<div class="icon-scroll"></div>
+			</section>
+
+		</main>
+		<!-- END MAIN-CONTENT -->
+	</div>
+	<!-- END PAGE WRAPPER -->
+{% endblock %}
+
+<!-- Add JavaScript unique to this page type -->
+{% block javascript %}{% endblock %}
