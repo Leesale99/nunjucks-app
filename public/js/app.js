@@ -90,12 +90,12 @@
 	
 	__webpack_require__(15);
 	
-	__webpack_require__(17);
+	__webpack_require__(16);
 	
 	// USING production variables is simple with the envVar function
 	// Burn after reading
 	
-	var _libEnvVar = __webpack_require__(16);
+	var _libEnvVar = __webpack_require__(17);
 	
 	var _libEnvVar2 = _interopRequireDefault(_libEnvVar);
 	
@@ -524,6 +524,32 @@
 /* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
+	// IMPORTS
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _jsLibThrottled = __webpack_require__(4);
+	
+	var _jsLibThrottled2 = _interopRequireDefault(_jsLibThrottled);
+	
+	// Set Hero Height to fulscreen size
+	var maxHeroHeight = function maxHeroHeight() {
+	  var hero = document.getElementById('hero'),
+	      windowHeight = window.innerHeight + 'px';
+	
+	  return hero.style.height = windowHeight;
+	};
+	
+	window.addEventListener('load', maxHeroHeight);
+	window.addEventListener('resize', function () {
+	  return (0, _jsLibThrottled2['default'])(maxHeroHeight(), 400);
+	});
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
 	// Jquery adds inline styles and these need to be overwritten.
 	// HeadStyle writes styles to the head tag and destorys them as well
 	// Usage:
@@ -541,23 +567,6 @@
 		}
 	};
 	module.exports = envVar;
-
-/***/ }),
-/* 17 */
-/***/ (function(module, exports) {
-
-	/* ---------------------------------------------------- */
-	/*	Background size screen								*/
-	/* ---------------------------------------------------- */
-	
-	'use strict';
-	
-	if ($('.hero').length) {
-	
-		$(window).on('load resize', function () {
-			$('.hero').css('height', window.innerHeight + 'px');
-		});
-	}
 
 /***/ })
 /******/ ]);
