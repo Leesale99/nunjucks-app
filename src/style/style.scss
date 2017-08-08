@@ -7,6 +7,7 @@
 @import 'modules/icons';
 @import 'modules/mixins';
 @import 'modules/flexboxgrid';
+@import 'modules/animations';
 
 @import '../components/accordion/bf_accordion';
 @import '../components/back_to_top/bf_back_to_top';
@@ -29,4 +30,5 @@
 @import '../components/tabs/bf_tabs';
 
 // PARTIALS
+@import 'partials/typography';
 @import 'partials/main';

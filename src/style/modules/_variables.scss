@@ -25,11 +25,22 @@ $icons:FontAwesome;
 	font-weight: 700;
 }
 // **********
+// BACKGROUND
+// **********
+@mixin fullScreen-bg {
+	background: {
+		size: cover;
+		repeat: no-repeat;
+		position: center;
+	}
+}
+// **********
 // COLORS
 // **********
 // Base Colors
 $white: #FFFFFF;
 $off_white: #c2c2c2;
+$shaded_white: #e4e2e0;
 $black: #000000;
 $white_translucent: rgba(255,255,255,0.8);
 $black_translucent: rgba(0,0,0,0.6);
