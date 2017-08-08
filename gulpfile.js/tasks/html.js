@@ -2,7 +2,7 @@ var config       = require('../config')
 if(!config.tasks.html) return
 
 var browserSync  = require('browser-sync')
-var data         = require('gulp-data')
+var data         = require('gulp-data') // added
 var gulp         = require('gulp')
 var gulpif       = require('gulp-if')
 var handleErrors = require('../lib/handleErrors')
@@ -23,7 +23,7 @@ var htmlTask = function() {
   return gulp.src(paths.src)
     .on('error', handleErrors)
     .pipe(data(function(file) {
-      return JSON.parse(fs.readFileSync('./data/data.json'));
+      return JSON.parse(fs.readFileSync(path.join(config.root.src, '/data/global.json'))); // added
     }))
     .pipe(render({
       path: [path.join(config.root.src, config.tasks.html.src)],

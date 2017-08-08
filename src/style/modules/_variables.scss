@@ -1,9 +1,8 @@
 // **********
 // TYPOGRAPHY
 // **********
-$serif: "Merriweather",serif;
-$sans: "Istok Web",sans-serif;
-$condensed: "Oswald", sans-serif;
+$serif: "Playfair Display",serif;
+$sans: "Heebo",sans-serif;
 $icons:FontAwesome;
 
 @mixin uppercase{
@@ -13,11 +12,6 @@ $icons:FontAwesome;
 @mixin serif-italic{
 	font-family: $serif;
     font-style: italic;
-}
-
-@mixin condensed-uppercase-bold{
-	font-family: $condensed;
-    text-transform: uppercase;
 }
 
 @mixin sans-light{

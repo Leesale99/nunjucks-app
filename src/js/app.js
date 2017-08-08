@@ -22,6 +22,8 @@ import '../components/search/searchBox/bf_searchBox';
 import '../components/search/searchFilters/bf_searchFilters';
 import '../components/social/bf_social';
 import '../components/tabs/bf_tabs';
+import '../components/headers/bf_headers';
+
 
 // USING production variables is simple with the envVar function
 // Burn after reading

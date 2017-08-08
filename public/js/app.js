@@ -90,6 +90,8 @@
 	
 	__webpack_require__(15);
 	
+	__webpack_require__(17);
+	
 	// USING production variables is simple with the envVar function
 	// Burn after reading
 	
@@ -539,6 +541,23 @@
 		}
 	};
 	module.exports = envVar;
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports) {
+
+	/* ---------------------------------------------------- */
+	/*	Background size screen								*/
+	/* ---------------------------------------------------- */
+	
+	'use strict';
+	
+	if ($('.hero').length) {
+	
+		$(window).on('load resize', function () {
+			$('.hero').css('height', window.innerHeight + 'px');
+		});
+	}
 
 /***/ })
 /******/ ]);
