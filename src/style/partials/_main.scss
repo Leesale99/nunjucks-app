@@ -1,10 +1,67 @@
-html,body{
+body,
+html {
 	font-size: 10px;
 }
-body{
+
+body {
 	font-size: 1.6rem;
 }
+// button reset
+
+button {
+	padding: 0;
+	border: none;
+
+	&:active,
+	&:focus {
+		outline: unset;
+	}
+}
+
+a {
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+a,
+button {
+	transition: $transition--all-5;
+
+	&:hover {
+		transition: $transition--hover;
+	}
+}
+// Animated Navigation Links
+
+nav > ul > li > a {
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		border: {
+			bottom-width: 1px;
+			bottom-style: solid;
+		}
+		transition: {
+			property: width;
+			timing-function: ease-out;
+			delay: 0s;
+			duration: inherit;
+		}
+	}
+
+	&:hover {
+		&:before {
+			width: 100%;
+		}
+	}
+}
 // JavaScript Created Element Styles
+
 .screen__overlay {
 	position: fixed;
 	top: 0;
@@ -15,16 +72,16 @@ body{
 	opacity: 0;
 	pointer-events: none;
 	transition: $transition--opacity;
+
 	&.screen__overlay--soft {
 		background: rgba(0, 0, 0, 0.33);
 	}
+
 	&.screen__overlay--hard {
 		z-index: 2;
 		background: rgba(0, 0, 0, 0.80);
 	}
 }
-
-
 /*
 ██████╗ ██╗  ██╗ ██████╗ ███╗   ██╗███████╗
 ██╔══██╗██║  ██║██╔═══██╗████╗  ██║██╔════╝
@@ -33,12 +90,7 @@ body{
 ██║     ██║  ██║╚██████╔╝██║ ╚████║███████╗
 ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
 */
-
-@include break(max, $screen-sm-max) {
-
-}
-
-
+@include break(max, $screen-sm-max) {}
 /*
 ██████╗ ███████╗███████╗██╗  ██╗████████╗ ██████╗ ██████╗
 ██╔══██╗██╔════╝██╔════╝██║ ██╔╝╚══██╔══╝██╔═══██╗██╔══██╗
@@ -48,7 +100,4 @@ body{
 ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝
 
 */
-
-@include break(min, $screen-md-min) {
-
-}
+@include break(min, $screen-md-min) {}

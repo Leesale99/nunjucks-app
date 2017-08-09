@@ -6,29 +6,37 @@
 	<!-- PAGE WRAPPER -->
 	<div class="wrapper">
 
-		<div class="offscreen-menu">
-			<button type="button">Close</button>
-			<nav class="nav-main">
+		<!-- MAIN NAVIGATION MENU -->
+		<div id="main-menu" class="main-menu">
+			<button class="main-menu__close" type="button">Close</button>
+			<nav class="main-menu__nav">
 				<ul>
 					<li><a href="residences.html">RESIDENCES</a></li>
 					<li><a href="amenities.html">AMENITIES</a></li>
 					<li><a href="neighborhood.html">NEIGHBORHOOD</a></li>
 					<li><a href="availability.html">AVAILABILITY</a></li>
 					<li><a href="press.html">PRESS</a></li>
-					<li><a href="news.html">NEWS</a></li>
+					<li class="sub-menu">
+						<a href="news.html">NEWS</a>
+						<ul>
+							<li><a href="news.html">NEWS</a></li>
+							<li><a href="news_single.html"></a>SINGLE NEWS</li>
+						</ul>
+					</li>
 					<li><a href="contact.html">CONTACT</a></li>
 				</ul>
 			</nav>
 		</div>
+		<!-- END MAIN NAVIGATION MENU -->
 
 		<!-- HEADER -->
 		<header id="header" class="header">
 			<!-- menu toggle btn -->
-			<button type="button">Menu</button>
+			<button class="header__btn" type="button"><svg class="lnr lnr-menu"><use xlink:href="#lnr-menu"></use></svg>Menu</button>
 			<!-- logo -->
-			<a class="logo" href="#"></a>
+			<a class="header__logo" href="#"></a>
 			<!-- Menu -->
-			<nav>
+			<nav class="header__nav">
 				<ul>
 					<li>
 						<a href="">Availability</a>

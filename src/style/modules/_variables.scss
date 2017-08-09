@@ -40,13 +40,17 @@ $icons:FontAwesome;
 // Base Colors
 $white: #FFFFFF;
 $off_white: #c2c2c2;
-$shaded_white: #e4e2e0;
 $black: #000000;
 $white_translucent: rgba(255,255,255,0.8);
 $black_translucent: rgba(0,0,0,0.6);
 
+// Site colors
+$primary: #202732;
+$secondary: #fdbc36;
+
 // Text colors
 $text_slate:#374049;
+$text_shaded_white: #e4e2e0;
 
 // Social Colors
 $facebookBlue: #3b5998;
@@ -69,5 +73,6 @@ $container-lg:117rem;
 
 // Animations
 $transition--opacity: opacity 300ms linear;
-$transition--all: all 300ms ease-in-out;
-$transition--all-fast: all 100ms;
+$transition--hover: all 100ms ease-in;
+$transition--all-5: all 500ms ease;
+$transition--all-6: all 600ms ease;
