@@ -1,76 +1,110 @@
 <!-- Extent this master layout -->
-{% extends '_layouts/main-application.html' %}
-{% set page = residences %}
+{% extends '_layouts/main-application.html' %} {% set page = residences %} {% block content %}
+<!-- PAGE WRAPPER -->
+<div id="wrapper" class="wrapper">
 
-{% block content %}
-	<!-- PAGE WRAPPER -->
-	<div class="wrapper">
+	<!-- MAIN NAVIGATION MENU -->
+	<div id="main-menu" class="main-menu">
+		<button id="close-btn" class="main-menu__close" type="button"><svg class="lnr lnr-cross"><use xlink:href="#lnr-cross"></use></svg>Close</button>
+		<nav class="main-menu__nav">
+			<ul>
+				<li><a href="residences.html">RESIDENCES</a></li>
+				<li><a href="amenities.html">AMENITIES</a></li>
+				<li><a href="neighborhood.html">NEIGHBORHOOD</a></li>
+				<li><a href="availability.html">AVAILABILITY</a></li>
+				<li><a href="press.html">PRESS</a></li>
+				<li class="sub-menu">
+					<a href="news.html">NEWS <svg class="lnr lnr-chevron-down"><use xlink:href="#lnr-chevron-down"></use></svg></a>
+					<ul>
+						<li><a href="news.html">NEWS</a></li>
+						<li><a href="news_single.html"></a>SINGLE NEWS</li>
+					</ul>
+				</li>
+				<li><a href="contact.html">CONTACT</a></li>
+			</ul>
+		</nav>
+	</div>
+	<!-- END MAIN NAVIGATION MENU -->
 
-		<!-- MAIN NAVIGATION MENU -->
-		<div id="main-menu" class="main-menu">
-			<button class="main-menu__close" type="button">Close</button>
-			<nav class="main-menu__nav">
-				<ul>
-					<li><a href="residences.html">RESIDENCES</a></li>
-					<li><a href="amenities.html">AMENITIES</a></li>
-					<li><a href="neighborhood.html">NEIGHBORHOOD</a></li>
-					<li><a href="availability.html">AVAILABILITY</a></li>
-					<li><a href="press.html">PRESS</a></li>
-					<li class="sub-menu">
-						<a href="news.html">NEWS</a>
-						<ul>
-							<li><a href="news.html">NEWS</a></li>
-							<li><a href="news_single.html"></a>SINGLE NEWS</li>
-						</ul>
-					</li>
-					<li><a href="contact.html">CONTACT</a></li>
-				</ul>
-			</nav>
+	<!-- HEADER -->
+	<header id="header" class="header">
+		<!-- menu toggle btn -->
+		<button id="header-btn" class="header__btn" type="button"><svg class="lnr lnr-menu"><use xlink:href="#lnr-menu"></use></svg>Menu</button>
+		<!-- logo -->
+		<a class="header__logo" href="#"></a>
+		<!-- Menu -->
+		<nav class="header__nav">
+			<ul>
+				<li>
+					<a href="">Availability</a>
+				</li>
+				<li>
+					<a href="">Press</a>
+				</li>
+				<li>
+					<a href="">Contact</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<!-- END HEADER -->
+
+	<!-- INTRO SECTION -->
+	<section id="hero" class="hero b-lazy" data-src="images/1920x1066_bg6.jpg">
+		<div class="container">
+			<div class="hero__caption">
+				<h1>Inside, Uutside – Elegant Giant <br> Focused On Details</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quis totam sed, ad commodi quasi harum cupiditate adipisci, fugit eligendi aliquid accusamus fuga numquam est perspiciatis, ratione repellendus. Sapiente, officia reiciendis repellendus atque
+					corporis.
+				</p>
+			</div>
 		</div>
-		<!-- END MAIN NAVIGATION MENU -->
+		<div class="icon-scroll"></div>
+	</section>
+	<!-- END INTRO SECTION -->
 
-		<!-- HEADER -->
-		<header id="header" class="header">
-			<!-- menu toggle btn -->
-			<button class="header__btn" type="button"><svg class="lnr lnr-menu"><use xlink:href="#lnr-menu"></use></svg>Menu</button>
-			<!-- logo -->
-			<a class="header__logo" href="#"></a>
-			<!-- Menu -->
-			<nav class="header__nav">
-				<ul>
-					<li>
-						<a href="">Availability</a>
-					</li>
-					<li>
-						<a href="">Press</a>
-					</li>
-					<li>
-						<a href="">Contact</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
-		<!-- END HEADER -->
+	<!-- MAIN CONTENT -->
+	<main class="content">
+		<div class="container">
 
-		<!-- MAIN-CONTENT -->
-		<main id="residences">
+			<!-- CONTENT SECTION -->
+			<section class="content__element">
+				<div class="row">
+					<!-- left column -->
+					<div class="col-sm-12 col-md-6">
+						<div class="img-col img-col--left">
+							<!-- <div class="custom-slider">
+								<li class="custom-slider__item"><a href="#"><img draggable="false" src="images/767x507_img1.jpg" alt="slide image"></a></li>
+								<li class="custom-slider__item"><a href="#"><img draggable="false" src="images/767x507_img2.jpg" alt="slide image"></a></li>
+								<div class="custom-slider__item"></div>
+								<div class="custom-slider__item"></div>
+							</div> -->
+							<div class="slider js_slider">
+								<div class="frame js_frame">
+									<ul class="slides js_slides">
+										<li class="js_slide"><a href="#"><img src="images/767x507_img1.jpg" alt="slide image"></a></li>
+										<li class="js_slide"><a href="#"><img src="images/767x507_img2.jpg" alt="slide image"></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- right column -->
+					<div class="col-sm-12 col-md-6">
+						<div class="img-col img-col--right">
 
-			<section id="hero" class="hero b-lazy" data-src="images/1920x1066_bg6.jpg">
-				<div class="container">
-					<div class="hero__caption">
-						<h1>Inside, Uutside – Elegant Giant <br> Focused On Details</h1>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quis totam sed, ad commodi quasi harum cupiditate adipisci, fugit eligendi aliquid accusamus fuga numquam est perspiciatis, ratione repellendus. Sapiente, officia reiciendis repellendus atque corporis.
-						</p>
+						</div>
 					</div>
 				</div>
-				<div class="icon-scroll"></div>
 			</section>
+			<!-- END CONTENT SECTION -->
 
-		</main>
-		<!-- END MAIN-CONTENT -->
-	</div>
-	<!-- END PAGE WRAPPER -->
+		</div>
+	</main>
+	<!-- END MAIN-CONTENT -->
+</div>
+<!-- END PAGE WRAPPER -->
 {% endblock %}
 
 <!-- Add JavaScript unique to this page type -->

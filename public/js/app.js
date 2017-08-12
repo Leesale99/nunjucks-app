@@ -92,10 +92,12 @@
 	
 	__webpack_require__(16);
 	
+	__webpack_require__(17);
+	
 	// USING production variables is simple with the envVar function
 	// Burn after reading
 	
-	var _libEnvVar = __webpack_require__(17);
+	var _libEnvVar = __webpack_require__(18);
 	
 	var _libEnvVar2 = _interopRequireDefault(_libEnvVar);
 	
@@ -356,10 +358,36 @@
 
 	'use strict';
 	
-	console.log('accordion');
+	(function () {
+	  'use strict';
+	
+	  document.addEventListener('DOMContentLoaded', function () {
+	    var slider = document.querySelector('.js_slider'),
+	        sliderImgs = document.querySelectorAll('.js_slider img');
+	
+	    lory(slider, {
+	      infinite: 1,
+	      enableMouseEvents: true
+	    });
+	
+	    sliderImgs.forEach(function (sliderImg) {
+	      sliderImg.addEventListener('mousedown', function (e) {
+	        return e.preventDefault();
+	      }, false);
+	    });
+	  });
+	})();
 
 /***/ }),
 /* 7 */
+/***/ (function(module, exports) {
+
+	'use strict';
+	
+	console.log('accordion');
+
+/***/ }),
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// IMPORTS
@@ -457,7 +485,7 @@
 	}, false);
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -465,7 +493,7 @@
 	console.log('carousel');
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -473,7 +501,7 @@
 	console.log('form login, signup, ...');
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -481,47 +509,80 @@
 	console.log('modal');
 
 /***/ }),
-/* 11 */
-/***/ (function(module, exports) {
-
-	"use strict";
-	
-	$(window).on("load", function () {
-	
-		$(".header__btn").on('click', function () {
-			$('#main-menu').toggleClass('open');
-			return false;
-		});
-	
-		var $win = $('.wrapper'); // or $box parent container
-		var $box = $("#main-menu");
-	
-		$win.on("click.Bst", function (event) {
-			if ($box.has(event.target).length === 0 //checks if descendants of $box was clicked
-			 && !$box.is(event.target) //checks if the $box itself was clicked
-			) {
-					$('#main-menu').removeClass('open');
-				}
-		});
-	
-		$("#main-menu__close").on('click', function () {
-			$('#main-menu').removeClass('open');
-			return false;
-		});
-	
-		$("li.sub-menu > a").on('click', function () {
-			$(this).next('ul').slideToggle(400);
-			return false;
-		});
-	});
-
-/***/ }),
 /* 12 */
 /***/ (function(module, exports) {
 
+	// $(window).on("load", function() {
+	//
+	//   var $wrapper = $('.wrapper');
+	//   var $box = $("#main-menu");
+	//
+	//   $(".header__btn").on('click', function() {
+	//     $box.toggleClass('open');
+	//     return false;
+	//   });
+	//
+	//   $wrapper.on("click", function(event) {
+	//     if ($box.has(event.target).length === 0) {
+	//       $box.removeClass('open');
+	//     }
+	//   });
+	//
+	//   $("#close-btn").on('click', function() {
+	//     $box.removeClass('open');
+	//     return false;
+	//   });
+	//
+	// $("li.sub-menu > a").on('click', function() {
+	//   $(this).next('ul').slideToggle(400);
+	//   return false;
+	// });
+	//
+	// });
+	
 	'use strict';
 	
-	console.log('search box in nav');
+	(function () {
+	
+	  var $wrapper = document.getElementById('wrapper'),
+	      $box = document.getElementById('main-menu'),
+	      $btnToggle = document.getElementById('header-btn'),
+	      $btnClose = document.getElementById('close-btn'),
+	      $subMenuLink = document.querySelector('li.sub-menu > a');
+	  var subMenuExpanded = false;
+	
+	  var toggleMenu = function toggleMenu() {
+	    $box.classList.toggle('open');
+	  };
+	
+	  var closeManu = function closeManu(e) {
+	    if (!$box.contains(e.target) && !$btnToggle.contains(e.target) || $btnClose.contains(e.target)) {
+	      $box.classList.remove('open');
+	    }
+	  };
+	
+	  var toggleSubMenu = function toggleSubMenu(e) {
+	    e.preventDefault();
+	    var target = e.target,
+	        $subMenu = target.nextElementSibling;
+	
+	    if ($subMenu) {
+	      var menuHeight = $subMenu.scrollHeight + 'px';
+	
+	      if (!subMenuExpanded) {
+	        $subMenu.style.height = menuHeight;
+	        return subMenuExpanded = true;
+	      } else {
+	        $subMenu.style.height = 0;
+	        return subMenuExpanded = false;
+	      }
+	    }
+	  };
+	
+	  $subMenuLink.addEventListener('click', toggleSubMenu, false);
+	  $btnToggle.addEventListener('click', toggleMenu, false);
+	  $wrapper.addEventListener('click', closeManu, false);
+	})();
 
 /***/ }),
 /* 13 */
@@ -529,7 +590,7 @@
 
 	'use strict';
 	
-	console.log('search filters');
+	console.log('search box in nav');
 
 /***/ }),
 /* 14 */
@@ -537,7 +598,7 @@
 
 	'use strict';
 	
-	console.log('social share AND social links');
+	console.log('search filters');
 
 /***/ }),
 /* 15 */
@@ -545,10 +606,18 @@
 
 	'use strict';
 	
-	console.log('tabs script should not care whether tabs are horizontal or vertical');
+	console.log('social share AND social links');
 
 /***/ }),
 /* 16 */
+/***/ (function(module, exports) {
+
+	'use strict';
+	
+	console.log('tabs script should not care whether tabs are horizontal or vertical');
+
+/***/ }),
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// IMPORTS
@@ -560,21 +629,24 @@
 	
 	var _jsLibThrottled2 = _interopRequireDefault(_jsLibThrottled);
 	
-	// Set Hero Height to fulscreen size
-	var maxHeroHeight = function maxHeroHeight() {
-	  var hero = document.getElementById('hero'),
-	      windowHeight = window.innerHeight + 'px';
+	(function () {
+	  'use strict';
+	  // Set Hero Height to fulscreen size
+	  var maxHeroHeight = function maxHeroHeight() {
+	    var hero = document.getElementById('hero'),
+	        windowHeight = window.innerHeight + 'px';
 	
-	  return hero.style.height = windowHeight;
-	};
+	    return hero.style.height = windowHeight;
+	  };
 	
-	window.addEventListener('load', maxHeroHeight);
-	window.addEventListener('resize', function () {
-	  return (0, _jsLibThrottled2['default'])(maxHeroHeight(), 400);
-	});
+	  window.addEventListener('load', maxHeroHeight);
+	  window.addEventListener('resize', function () {
+	    return (0, _jsLibThrottled2['default'])(maxHeroHeight(), 400);
+	  });
+	})();
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// Jquery adds inline styles and these need to be overwritten.

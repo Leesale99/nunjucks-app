@@ -24,16 +24,7 @@ $icons:FontAwesome;
 	text-transform: uppercase;
 	font-weight: 700;
 }
-// **********
-// BACKGROUND
-// **********
-@mixin fullScreen-bg {
-	background: {
-		size: cover;
-		repeat: no-repeat;
-		position: center;
-	}
-}
+
 // **********
 // COLORS
 // **********

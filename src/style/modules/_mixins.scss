@@ -91,3 +91,34 @@ Just use ths folloing to get font-awesome icons in content
 				}
 		}
 }
+
+// **********
+// MENU-TOGGLE BUTTON
+// **********
+@mixin menu-toggle {
+	font-size: 1.4rem;
+	background-color: transparent;
+	text-transform: uppercase;
+	color: $white;
+	font-weight: 500;
+	letter-spacing: 0.8px;
+	line-height: 2.5;
+
+	& > svg {
+		font-size: 4rem;
+		margin-right: 1rem;
+		display: inline-block;
+		vertical-align: -1rem;
+	}
+}
+
+// **********
+// BACKGROUND
+// **********
+@mixin fullScreen-bg {
+	background: {
+		size: cover;
+		repeat: no-repeat;
+		position: center;
+	}
+}

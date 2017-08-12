@@ -6,7 +6,12 @@ html {
 body {
 	font-size: 1.6rem;
 }
-// button reset
+
+ul, ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
 
 button {
 	padding: 0;
@@ -19,7 +24,7 @@ button {
 }
 
 a {
-	&:hover {
+	&:hover, &:focus {
 		text-decoration: none;
 	}
 }
@@ -32,8 +37,7 @@ button {
 		transition: $transition--hover;
 	}
 }
-// Animated Navigation Links
-
+/*Animated Navigation Links*/
 nav > ul > li > a {
 	&:before {
 		content: "";
@@ -60,8 +64,7 @@ nav > ul > li > a {
 		}
 	}
 }
-// JavaScript Created Element Styles
-
+/*JavaScript Created Element Styles*/
 .screen__overlay {
 	position: fixed;
 	top: 0;

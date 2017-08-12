@@ -1,31 +1,69 @@
-$(window).on("load",function(){
+// $(window).on("load", function() {
+//
+//   var $wrapper = $('.wrapper');
+//   var $box = $("#main-menu");
+//
+//   $(".header__btn").on('click', function() {
+//     $box.toggleClass('open');
+//     return false;
+//   });
+//
+//   $wrapper.on("click", function(event) {
+//     if ($box.has(event.target).length === 0) {
+//       $box.removeClass('open');
+//     }
+//   });
+//
+//   $("#close-btn").on('click', function() {
+//     $box.removeClass('open');
+//     return false;
+//   });
+//
+// $("li.sub-menu > a").on('click', function() {
+//   $(this).next('ul').slideToggle(400);
+//   return false;
+// });
+//
+// });
 
-			$(".header__btn").on('click',function() {
-	            $('#main-menu').toggleClass('open');
-	            return false;
-	        });
+(function() {
+  
+  const $wrapper = document.getElementById('wrapper'),
+    $box = document.getElementById('main-menu'),
+    $btnToggle = document.getElementById('header-btn'),
+    $btnClose = document.getElementById('close-btn'),
+    $subMenuLink = document.querySelector('li.sub-menu > a');
+  let subMenuExpanded = false;
 
-	        var $win = $('.wrapper'); // or $box parent container
-			var $box = $("#main-menu");
+  let toggleMenu = () => {
+    $box.classList.toggle('open');
+  }
 
-		 	$win.on("click.Bst", function(event){
-				if (
-	            $box.has(event.target).length === 0 //checks if descendants of $box was clicked
-	            &&
-	            !$box.is(event.target) //checks if the $box itself was clicked
-		        ){
-					$('#main-menu').removeClass('open');
-				}
-			});
+  let closeManu = (e) => {
+    if (!$box.contains(e.target) && !$btnToggle.contains(e.target) || $btnClose.contains(e.target)) {
+      $box.classList.remove('open');
+    }
+  }
 
-			$("#main-menu__close").on('click',function() {
-	            $('#main-menu').removeClass('open');
-	            return false;
-	        });
+  let toggleSubMenu = (e) => {
+    e.preventDefault();
+    const target = e.target,
+      $subMenu = target.nextElementSibling;
 
-	        $("li.sub-menu > a").on('click',function() {
-	            $(this).next('ul').slideToggle(400);
-	            return false;
-	        });
+    if ($subMenu) {
+      const menuHeight = $subMenu.scrollHeight + 'px';
 
-		});
+      if (!subMenuExpanded) {
+        $subMenu.style.height = menuHeight;
+        return subMenuExpanded = true;
+      } else {
+        $subMenu.style.height = 0;
+        return subMenuExpanded = false;
+      }
+    }
+  }
+
+  $subMenuLink.addEventListener('click', toggleSubMenu, false);
+  $btnToggle.addEventListener('click', toggleMenu, false);
+  $wrapper.addEventListener('click', closeManu, false);
+})();
