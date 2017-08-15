@@ -28,8 +28,10 @@
 @import '../components/search/searchResult/bf_searchResult';
 @import '../components/social/bf_social';
 @import '../components/tabs/bf_tabs';
+@import '../components/nav_utility/bf_nav_utility';
 
 // PARTIALS
-@import 'partials/typography';
 @import 'partials/main';
+@import 'partials/typography';
+@import 'partials/layouts';
 @import 'partials/custom-slider';

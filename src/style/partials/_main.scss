@@ -4,13 +4,7 @@ html {
 }
 
 body {
-	font-size: 1.6rem;
-}
-
-ul, ol {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+	font-size: 1.8rem;
 }
 
 button {
@@ -37,10 +31,16 @@ button {
 		transition: $transition--hover;
 	}
 }
-/*Animated Navigation Links*/
+
+ul, ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
 nav > ul > li > a {
 	&:before {
-		content: "";
+		content: '';
 		display: block;
 		position: absolute;
 		bottom: 0;
@@ -104,3 +104,13 @@ nav > ul > li > a {
 
 */
 @include break(min, $screen-md-min) {}
+
+
+.b-lazy {
+						transition: $transition--opacity;
+						 max-width: 100%;
+							 opacity: 0;
+}
+.b-lazy.b-loaded {
+							 opacity: 1;
+}

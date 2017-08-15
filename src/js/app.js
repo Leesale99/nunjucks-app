@@ -11,7 +11,7 @@
 
 import 'modules/bLazySettings';
 import 'modules/backToTop';
-import 'modules/lorySliderSettings';
+import 'modules/flickitySettings';
 
 import '../components/accordion/bf_accordion';
 import '../components/back_to_top/bf_back_to_top';

@@ -362,18 +362,16 @@
 	  'use strict';
 	
 	  document.addEventListener('DOMContentLoaded', function () {
-	    var slider = document.querySelector('.js_slider'),
-	        sliderImgs = document.querySelectorAll('.js_slider img');
+	    Array.prototype.slice.call(document.querySelectorAll('.custom-slider')).forEach(function (element, index) {
 	
-	    lory(slider, {
-	      infinite: 1,
-	      enableMouseEvents: true
-	    });
-	
-	    sliderImgs.forEach(function (sliderImg) {
-	      sliderImg.addEventListener('mousedown', function (e) {
-	        return e.preventDefault();
-	      }, false);
+	      var delay = Math.floor(Math.random() * 2000) + 3000;
+	      var flkty = new Flickity(element, {
+	        autoPlay: false,
+	        pageDots: false,
+	        prevNextButtons: false,
+	        lazyLoad: true,
+	        wrapAround: true
+	      });
 	    });
 	  });
 	})();

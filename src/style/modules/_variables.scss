@@ -49,7 +49,9 @@ $twitterBlue: #4099ff;
 
 
 // Padding/Margins
-$content-padding:3.6rem;
+$element-padding: 3rem;
+$element-offset: 5rem;
+$section-padding: 3 * $element-padding;
 $p-spacing: 2rem;
 
 // Some math to get container size then base blocks off them
@@ -60,10 +62,11 @@ $container-lg-half:58.5rem;
 
 $container-sm:75rem;
 $container-md:97rem;
-$container-lg:117rem;
+// $container-lg:117rem;
+$container-lg:170rem;
 
 // Animations
-$transition--opacity: opacity 300ms linear;
+$transition--opacity: opacity 500ms ease-in-out;
 $transition--hover: all 100ms ease-in;
 $transition--all-5: all 500ms ease;
 $transition--all-6: all 600ms ease;

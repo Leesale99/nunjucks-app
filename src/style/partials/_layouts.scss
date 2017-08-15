@@ -1,0 +1,84 @@
+.section {
+  margin-bottom: $section-padding;
+}
+
+.row {
+  &--flex {
+    align-items: flex-end;
+  }
+
+  &--lead {
+    @extend .row--flex;
+    margin-top: - 2 * $element-padding;
+  }
+}
+
+.img-wrap {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    background-color: $white;
+    width: calc(100% - #{$element-offset});
+    height: 100%;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.13);
+  }
+
+  &--left {
+    text-align: right;
+
+    &:before {
+      left: 0;
+    }
+  }
+
+  &--bottomLeft {
+    text-align: right;
+
+    &:before {
+      left: 0;
+      top: 7rem;
+      width: calc(100% + #{$element-offset * 2});
+      height: calc(100% - 7rem);
+      z-index: 2;
+      box-shadow: -15px 0 30px 0 rgba(0, 0, 0, 0.13);
+    }
+  }
+
+  &--right {
+    text-align: left;
+
+    &:before {
+      right: 0;
+    }
+  }
+
+  &--bottomRight {
+    text-align: left;
+
+    &:before {
+      right: 0;
+      top: 7rem;
+      width: calc(100% + #{$element-offset * 2});
+      height: calc(100% - 7rem);
+      z-index: 2;
+      box-shadow: 15px 0 30px 0 rgba(0, 0, 0, 0.13);
+    }
+  }
+}
+
+.text-wrap {
+  padding: 3 * $element-padding $element-offset;
+  max-width: 60rem;
+
+  &--left {
+    margin-left: auto;
+  }
+
+  &--right {
+    margin-right: auto;
+  }
+}
