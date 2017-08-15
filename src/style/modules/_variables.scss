@@ -24,6 +24,7 @@ $icons:FontAwesome;
 	text-transform: uppercase;
 	font-weight: 700;
 }
+
 // **********
 // COLORS
 // **********
@@ -34,8 +35,13 @@ $black: #000000;
 $white_translucent: rgba(255,255,255,0.8);
 $black_translucent: rgba(0,0,0,0.6);
 
+// Site colors
+$primary: #202732;
+$secondary: #fdbc36;
+
 // Text colors
 $text_slate:#374049;
+$text_shaded_white: #e4e2e0;
 
 // Social Colors
 $facebookBlue: #3b5998;
@@ -43,7 +49,9 @@ $twitterBlue: #4099ff;
 
 
 // Padding/Margins
-$content-padding:3.6rem;
+$element-padding: 3rem;
+$element-offset: 5rem;
+$section-padding: 3 * $element-padding;
 $p-spacing: 2rem;
 
 // Some math to get container size then base blocks off them
@@ -54,9 +62,11 @@ $container-lg-half:58.5rem;
 
 $container-sm:75rem;
 $container-md:97rem;
-$container-lg:117rem;
+// $container-lg:117rem;
+$container-lg:170rem;
 
 // Animations
-$transition--opacity: opacity 300ms linear;
-$transition--all: all 300ms ease-in-out;
-$transition--all-fast: all 100ms;
+$transition--opacity: opacity 500ms ease-in-out;
+$transition--hover: all 100ms ease-in;
+$transition--all-5: all 500ms ease;
+$transition--all-6: all 600ms ease;

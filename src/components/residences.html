@@ -1,68 +1,312 @@
 <!-- Extent this master layout -->
-{% extends '_layouts/main-application.html' %}
-{% set page = residences %}
+{% extends '_layouts/main-application.html' %} {% set page = residences %} {% block content %}
+<!-- PAGE WRAPPER -->
+<div id="wrapper" class="wrapper">
 
-{% block content %}
-	<!-- PAGE WRAPPER -->
-	<div class="wrapper">
+	<!-- MAIN NAVIGATION MENU -->
+	<div id="main-menu" class="main-menu">
+		<button id="close-btn" class="main-menu__close" type="button"><svg class="lnr lnr-cross"><use xlink:href="#lnr-cross"></use></svg>Close</button>
+		<nav class="main-menu__nav">
+			<ul>
+				<li><a href="residences.html">RESIDENCES</a></li>
+				<li><a href="amenities.html">AMENITIES</a></li>
+				<li><a href="neighborhood.html">NEIGHBORHOOD</a></li>
+				<li><a href="availability.html">AVAILABILITY</a></li>
+				<li><a href="press.html">PRESS</a></li>
+				<li class="sub-menu">
+					<a href="news.html">NEWS <svg class="lnr lnr-chevron-down"><use xlink:href="#lnr-chevron-down"></use></svg></a>
+					<ul>
+						<li><a href="news.html">NEWS</a></li>
+						<li><a href="news_single.html"></a>SINGLE NEWS</li>
+					</ul>
+				</li>
+				<li><a href="contact.html">CONTACT</a></li>
+			</ul>
+		</nav>
+	</div>
+	<!-- END MAIN NAVIGATION MENU -->
 
-		<div class="offscreen-menu">
-			<button type="button">Close</button>
-			<nav class="nav-main">
-				<ul>
-					<li><a href="residences.html">RESIDENCES</a></li>
-					<li><a href="amenities.html">AMENITIES</a></li>
-					<li><a href="neighborhood.html">NEIGHBORHOOD</a></li>
-					<li><a href="availability.html">AVAILABILITY</a></li>
-					<li><a href="press.html">PRESS</a></li>
-					<li><a href="news.html">NEWS</a></li>
-					<li><a href="contact.html">CONTACT</a></li>
-				</ul>
-			</nav>
+	<!-- HEADER -->
+	<header id="header" class="header">
+		<!-- menu toggle btn -->
+		<button id="header-btn" class="header__btn" type="button"><svg class="lnr lnr-menu">
+			<use xlink:href="#lnr-menu"></use></svg>Menu
+		</button>
+		<!-- logo -->
+		<a class="header__logo" href="#"></a>
+		<!-- Menu -->
+		<nav class="header__nav">
+			<ul>
+				<li>
+					<a href="">Availability</a>
+				</li>
+				<li>
+					<a href="">Press</a>
+				</li>
+				<li>
+					<a href="">Contact</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<!-- END HEADER -->
+
+	<!-- INTRO SECTION -->
+	<section id="hero" class="hero b-lazy" src="images/placeholder-image.jpg" data-src="images/1920x1066_bg6.jpg">
+		<div class="container">
+			<div class="hero__caption">
+				<h1>Inside, Uutside – Elegant Giant <br> Focused On Details</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quis totam sed, ad commodi quasi harum cupiditate adipisci, fugit eligendi aliquid accusamus fuga numquam est perspiciatis, ratione repellendus. Sapiente, officia reiciendis repellendus atque
+					corporis.
+				</p>
+			</div>
 		</div>
+		<div class="icon-scroll"></div>
+	</section>
+	<!-- END INTRO SECTION -->
 
-		<!-- HEADER -->
-		<header id="header" class="header">
-			<!-- menu toggle btn -->
-			<button type="button">Menu</button>
-			<!-- logo -->
-			<a class="logo" href="#"></a>
-			<!-- Menu -->
-			<nav>
-				<ul>
-					<li>
-						<a href="">Availability</a>
-					</li>
-					<li>
-						<a href="">Press</a>
-					</li>
-					<li>
-						<a href="">Contact</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
-		<!-- END HEADER -->
-
-		<!-- MAIN-CONTENT -->
-		<main id="residences">
-
-			<section id="hero" class="hero b-lazy" data-src="images/1920x1066_bg6.jpg">
-				<div class="container">
-					<div class="hero__caption">
-						<h1>Inside, Uutside – Elegant Giant Focused On Details</h1>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quis totam sed, ad commodi quasi harum cupiditate adipisci, fugit eligendi aliquid accusamus fuga numquam est perspiciatis, ratione repellendus. Sapiente, officia reiciendis repellendus atque corporis.
-						</p>
+	<!-- MAIN CONTENT -->
+	<main class="content">
+		<div class="container">
+			<!-- CONTENT SECTION -->
+			<section class="section">
+				<div class="row row--lead">
+					<!-- left column -->
+					<div class="col-sm-12 col-md-6">
+						<div class="img-wrap img-wrap--left">
+							<ul class="custom-slider">
+								<li class="custom-slider__item">
+									<a href="#"><img data-flickity-lazyload="images/768x558_img1.jpg" alt="image slide"></a>
+								</li>
+								<li class="custom-slider__item">
+									<a href="#"><img data-flickity-lazyload="images/768x558_img2.jpg" alt="image slide"></a>
+								</li>
+							</ul>
+							<ul class="custom-slider">
+								<li class="custom-slider__item">
+									<a href="#"><img data-flickity-lazyload="images/768x380_img1.jpg" alt="image slide"></a>
+								</li>
+								<li class="custom-slider__item">
+									<a href="#"><img data-flickity-lazyload="images/768x380_img4.jpg" alt="image slide"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- right column -->
+					<div class="col-sm-12 col-md-6">
+						<div class="text-wrap text-wrap--right">
+							<h2 class="title--section">Kitchen / Living Room</h2>
+							<p>
+								You will definitely fall in love with such a practical and superior well-equipped kitchen. It combines both as technical accomplishments and comfort, as style and beauty. There are gas cooktop, retractable downdraft hood, wine storage and many other necessary
+								elements of the kitchen area.
+							</p>
+						</div>
+						<div class="img-wrap img-wrap--bottomRight">
+							<ul class="custom-slider">
+								<li class="custom-slider__item">
+									<a href="#"><img data-flickity-lazyload="images/767x507_img1.jpg" alt="image slide"></a>
+								</li>
+								<li class="custom-slider__item">
+									<a href="#"><img data-flickity-lazyload="images/767x507_img2.jpg" alt="image slide"></a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
-				<div class="icon-scroll"></div>
 			</section>
-
-		</main>
-		<!-- END MAIN-CONTENT -->
-	</div>
-	<!-- END PAGE WRAPPER -->
+			<!-- END CONTENT SECTION -->
+			<!-- CONTENT SECTION -->
+			<section class="section">
+				<div class="row row--flex">
+					<!-- left column -->
+					<div class="col-sm-12 col-md-6">
+						<div class="text-wrap text-wrap--left">
+							<h2 class="title--section">Master Bedroom</h2>
+							<p>
+								This room invites you to the atmosphere of harmony and satisfaction. Most of the master suites have lovely balconies to enjoy early morning or sunset time.
+							</p>
+						</div>
+						<div class="img-wrap img-wrap--bottomLeft">
+							<ul class="custom-slider">
+								<li class="custom-slider__item">
+									<a href="#"><img data-flickity-lazyload="images/768x350_img1.jpg" alt="image slide"></a>
+								</li>
+								<li class="custom-slider__item">
+									<a href="#"><img data-flickity-lazyload="images/768x350_img2.jpg" alt="image slide"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- right column -->
+					<div class="col-sm-12 col-md-6">
+						<div class="img-wrap img-wrap--right">
+							<ul class="custom-slider">
+								<li class="custom-slider__item">
+									<a href="#"><img data-flickity-lazyload="images/767x701_img1.jpg" alt="image slide"></a>
+								</li>
+								<li class="custom-slider__item">
+									<a href="#"><img data-flickity-lazyload="images/767x701_img3.jpg" alt="image slide"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- END CONTENT SECTION -->
+			<!-- CONTENT SECTION -->
+			<section class="section">
+				<div class="row">
+					<!-- left column -->
+					<div class="col-sm-12 col-md-6">
+						<div class="img-wrap img-wrap--left">
+							<ul class="custom-slider">
+								<li class="custom-slider__item">
+									<a href="#"><img data-flickity-lazyload="images/768x408_img1.jpg" alt="image slide"></a>
+								</li>
+								<li class="custom-slider__item">
+									<a href="#"><img data-flickity-lazyload="images/768x408_img2.jpg" alt="image slide"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- right column -->
+					<div class="col-sm-12 col-md-6">
+						<div class="text-wrap text-wrap--right">
+							<h2 class="title--section">Master Bathroom</h2>
+							<p>
+								Quite roomy master bath offers an ample tub covered with posh marble. Relax and relieve the stress at the end of the day.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- END CONTENT SECTION -->
+			<section class="section">
+				<div class="row row--flex">
+					<!-- left column -->
+					<div class="col-sm-12 col-md-6">
+						<div class="text-wrap text-wrap--left">
+							<h2 class="title--section">Child Rooms</h2>
+							<p>
+								There is an amazing secret world of games and adventures behind the doors of every child room. Comfortable and safe furniture, multi-paned double-hung windows frame, multiple zones of heating and cooling – all these make this place the best one for children's relaxation and fun.
+							</p>
+						</div>
+						<div class="img-wrap img-wrap--bottomLeft">
+							<ul class="custom-slider">
+								<li class="custom-slider__item">
+									<a href="#"><img data-flickity-lazyload="images/768x380_img2.jpg" alt="image slide"></a>
+								</li>
+								<li class="custom-slider__item">
+									<a href="#"><img data-flickity-lazyload="images/768x380_img5.jpg" alt="image slide"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- right column -->
+					<div class="col-sm-12 col-md-6">
+						<div class="img-wrap img-wrap--right">
+							<ul class="custom-slider">
+								<li class="custom-slider__item">
+									<a href="#"><img data-flickity-lazyload="images/767x280_img1.jpg" alt="image slide"></a>
+								</li>
+								<li class="custom-slider__item">
+									<a href="#"><img data-flickity-lazyload="images/767x280_img2.jpg" alt="image slide"></a>
+								</li>
+							</ul>
+							<ul class="custom-slider">
+								<li class="custom-slider__item">
+									<a href="#"><img data-flickity-lazyload="images/767x481_img1.jpg" alt="image slide"></a>
+								</li>
+								<li class="custom-slider__item">
+									<a href="#"><img data-flickity-lazyload="images/767x481_img2.jpg" alt="image slide"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- END CONTENT SECTION -->
+			<!-- CONTENT SECTION -->
+			<section class="section">
+				<div class="row row--flex">
+					<!-- left column -->
+					<div class="col-sm-12 col-md-6">
+						<div class="img-wrap img-wrap--left">
+							<ul class="custom-slider">
+								<li class="custom-slider__item">
+									<a href="#"><img data-flickity-lazyload="images/768x701_img1.jpg" alt="image slide"></a>
+								</li>
+								<li class="custom-slider__item">
+									<a href="#"><img data-flickity-lazyload="images/768x701_img2.jpg" alt="image slide"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- right column -->
+					<div class="col-sm-12 col-md-6">
+						<div class="text-wrap text-wrap--right">
+							<h2 class="title--section">Secondary Bathroom</h2>
+							<p>
+								Wide bathroom with great design shower area.
+							</p>
+						</div>
+						<div class="img-wrap img-wrap--bottomRight">
+							<ul class="custom-slider">
+								<li class="custom-slider__item">
+									<a href="#"><img data-flickity-lazyload="images/767x380_img1.jpg" alt="image slide"></a>
+								</li>
+								<li class="custom-slider__item">
+									<a href="#"><img data-flickity-lazyload="images/767x380_img2.jpg" alt="image slide"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- END CONTENT SECTION -->
+			<!-- END CONTENT SECTION -->
+			<section class="section">
+				<div class="row row--flex">
+					<!-- left column -->
+					<div class="col-sm-12 col-md-6">
+						<div class="text-wrap text-wrap--left">
+							<h2 class="title--section">Private Balcony/Terrace</h2>
+							<p>
+								Enjoy the silence and fresh morning air with a cup of coffee on the balcony or terrace.
+							</p>
+						</div>
+					</div>
+					<!-- right column -->
+					<div class="col-sm-12 col-md-6">
+						<div class="img-wrap img-wrap--right">
+							<ul class="custom-slider">
+								<li class="custom-slider__item">
+									<a href="#"><img data-flickity-lazyload="images/767x330_img1.jpg" alt="image slide"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- END CONTENT SECTION -->
+			<!-- PAGE NAVIGATION -->
+			<aside class="page-nav">
+				<div class="page-nav__wrap">
+					<h3 class="page-nav__title title--section"><b>Open The Door. Feel New Home</b></h3>
+					<nav class="page-nav__nav">
+						<a class="page-nav__prev" href="#">AVAILABILITY</a>
+						<a class="page-nav__btn" href="#"></a>
+						<a class="page-nav__next" href="#">AMENITIES</a>
+					</nav>
+				</div>
+			</aside>
+			<!-- END PAGE NAVIGATION -->
+		</div>
+	</main>
+	<!-- END MAIN-CONTENT -->
+</div>
+<!-- END PAGE WRAPPER -->
 {% endblock %}
 
 <!-- Add JavaScript unique to this page type -->

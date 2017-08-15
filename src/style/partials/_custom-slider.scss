@@ -1,0 +1,44 @@
+.custom-slider {
+  padding: $element-padding 0;
+  width: calc(100% - #{$element-offset});
+  display: inline-block;
+  z-index: 9;
+  position: relative;
+
+  & + .custom-slider {
+    margin-top: - $element-padding;
+  }
+
+  &__item {
+    width: 100%;
+    img {
+      width: 100%;
+      display: block;
+      transition: $transition--opacity;
+      opacity: 0;
+
+      &.flickity-lazyloaded {
+        opacity: 1;
+      }
+    }
+
+
+  }
+  // &__frame {
+  //   width: 100%;
+  //   font-size: 0;
+  //   line-height: 0;
+  //   overflow: hidden;
+  //   white-space: nowrap;
+  // }
+  // &__slides {
+  //   display: inline-block;
+  //
+  //
+  //   li {
+  //     position: relative;
+  //     display: inline-block;
+  //     width: 100%;
+  //   }
+  // }
+}

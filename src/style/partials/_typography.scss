@@ -1,0 +1,48 @@
+// **********
+// ICONS
+// **********
+.lnr {
+  display: inline-block;
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.05em;
+}
+
+body {
+  font-family: $sans;
+  line-height: 1.667;
+  color: $primary;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $serif;
+}
+
+h1 {
+  font: {
+    size: 6rem;
+    weight: 700;
+  }
+}
+
+p {
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
+.title--section {
+  font-size: 4.8rem;
+  line-height: 1.25;
+  font-weight: normal;
+
+  &:not(:last-child) {
+    margin: 0 0 4.3rem;
+  }
+}
